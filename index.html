@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leila Martinez</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo"><img src="pictures/logo.png" alt="Logo" width="100" height="100"></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="intro" id="intro">
+            <h2 id="introName">Welcome to my portfolio!<br>I'm <span>Leila</span> Martinez</h2>
+            <a href="#about" id="introExplore">Explore</a>
+        </div>
+        <div class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="user">
+                        <img src="pictures/cropMe.png" width="500">
+                    </div>
+                    <div class="bio">
+                        <h2>About</h2>
+                        <p> Currently a Master's student for Software Engineering at UTEP (University of Texas at El Paso).
+                            Started my journey in Jan. 2022 with pre-requisites for the master's and have maintained motivated
+                            and excited for this career.
+                        </p>
+                        <div class ="tab-titles">
+                            <p class ="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class ="tab-links" onclick="opentab('projectsTab')">Projects</p>
+                            <p class ="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class = "tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>- UX Design</span>
+                                <li><span>- Java</span></li>
+                                <li><span>- Python</span></li>
+                                <li><span>- MySQL</span></li>
+                                <li><span>- Kotlin (Basics)</span></li>
+                                <li><span>- Html & CSS</span></li>
+                            </ul>
+                        </div>
+                        <div class = "tab-contents" id="projectsTab">
+                            <ul>
+                                <li><span>Movie Theater Snack App</span><br>Focused on UX designs which included 
+                                    creating a low and high-level prototype in Figma. </li>
+                                <li><span>Create-A-Car</span><br>An app created to learned cross-platform programming using Flutter and Dart language</li>
+                                <li><span>Paydirt Pete Got to Pay Tuition</span><br>Computer based game using Unity game platform, focus was to use TSP team model approach. Teams goals were to learn C#, scripts, and animation for the game. </li>
+                                <li><span>El Paso Active Engage (EPAE) </span><br> Usage of low-field prototype, TSP team model, and proper documentation for project's lifecycle. </li>
+                            </ul>
+                        </div>
+                        <div class = "tab-contents" id="education">
+                            <ul>
+                                <li><span>University of Texas at El Paso (UTEP)</span><br>Aug 2015 - May 2019<br> Bachelor's in Biology with Pre-Med Concentration
+                                <br><br>Jan 2022 - On Going<br> Master's in Software Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------- PROJECTS ----------------->
+        <div class="projects" id="projects">
+            <div class="container">
+                <h1 class="sub-title"> Projects</h1>
+                <div class="work-list">
+
+                </div>
+            </div>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let mountains = document.getElementById('mountains');
+            let fog = document.getElementById('fog');
+            let trees = document.getElementById('trees');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                fog.style.left = value * 0.15 + 'px';
+            })
+        </script>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
