@@ -46,6 +46,8 @@
                                 <li><span>- MySQL</span></li>
                                 <li><span>- Kotlin (Basics)</span></li>
                                 <li><span>- Html & CSS</span></li>
+                                <li><span>- Html & CSS</span></li>
+                                
                             </ul>
                         </div>
                         <div class = "tab-contents" id="projectsTab">
@@ -69,27 +71,67 @@
         </div>
         <!-------------- PROJECTS ----------------->
         <div class="projects" id="projects">
-            <div class="container">
-                <h1 class="sub-title"> Projects</h1>
-                <div class="work-list">
-
+            <h1> PROJECTS</h1>
+            <div class="wrapper_Project">
+                <div class="container_Project">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for ="c1" class="card_Project">
+                        <div class="card_Row">
+                            <div class="card_Icon">1</div>
+                            <div class="card_Info">
+                                <h4>Build-A-Car</h4>
+                                <p>Cross-Platform programming with Flutter</p>
+                                <a class="card_button">Learn More</a>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for ="c2" class="card_Project">
+                        <div class="card_Row">
+                            <div class="card_Icon">2</div>
+                            <div class="card_Info">
+                                <h4>El Paso License Center</h4>
+                                <a class="card_button">Learn More</a>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for ="c3" class="card_Project">
+                        <div class="card_Row">
+                            <div class="card_Icon">3</div>
+                            <div class="card_Info">
+                                <h4>UTEP Website</h4>
+                                <p></p>
+                                <a class="card_button">Learn More</a>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c4" >
+                    <label for ="c4" class="card_Project">
+                        <div class="card_Row">
+                            <div class="card_Icon">4</div>
+                            <div class="card_Info">
+                                <h4>HTML Mini Projects</h4>
+                                <a class="card_button">Learn More</a>
+                            </div>
+                        </div>
+                    </label>
+                </label>
+                <input type="radio" name="slide" id="c5" >
+                <label for ="c5" class="card_Project">
+                    <div class="card_Row">
+                        <div class="card_Icon">5</div>
+                        <div class="card_Info">
+                            <h4>PayDirt's Gotta to Pay to Tuition</h4>
+                            <a class="card_button">Learn More</a>
+                        </div>
+                    </div>
+                </label>
                 </div>
             </div>
         </div>
-        <script>
-            let stars = document.getElementById('stars');
-            let mountains = document.getElementById('mountains');
-            let fog = document.getElementById('fog');
-            let trees = document.getElementById('trees');
-            let text = document.getElementById('text');
-            let btn = document.getElementById('btn');
-
-            window.addEventListener('scroll', function(){
-                let value = window.scrollY;
-                stars.style.left = value * 0.25 + 'px';
-                fog.style.left = value * 0.15 + 'px';
-            })
-        </script>
+        
+        <!--------------- SCRIPTS ------------------>
 
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
